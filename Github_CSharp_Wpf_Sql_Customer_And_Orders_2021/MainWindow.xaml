@@ -1,0 +1,358 @@
+<Window x:Class="WpfSsmsPizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSsmsPizza"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+
+        <Grid Background="AliceBlue">
+            <StackPanel Width="300">
+                <TextBlock FontWeight="Bold" FontSize="25">
+                Oopsie: Midterm Redo
+                </TextBlock>
+                <StackPanel>
+
+
+                    <TextBlock FontWeight="Bold" FontSize="20">
+                        Customer Data 
+                    </TextBlock>
+                    <TextBlock>
+                    Name:
+                    </TextBlock>
+                    
+                    <TextBox Name="NameBox">
+
+                    </TextBox>
+                    
+                    <TextBlock>
+                    User Name:
+                    </TextBlock>
+                    
+                    <TextBox Name="UserNameBox">
+
+                    </TextBox>
+                    
+                    <TextBlock>
+                    Email:
+                    </TextBlock>
+                    
+                    <TextBox Name="EmailBox">
+
+                    
+                    </TextBox>
+                    
+                    <TextBlock>
+                    Password:
+                    </TextBlock>
+                    
+                    <TextBox Name="PasswordBox">
+
+                    </TextBox>
+
+                    <Button Margin="0, 10, 0, 0" Click="RegisterBtn_Click">
+                        Register
+                    </Button>
+
+
+                    <TextBlock>
+                        Read Customer By Id:
+                    </TextBlock>
+                    <TextBox Name="ReadCustomerID">
+                        
+                    </TextBox>
+                    <Button Margin="0, 10, 0, 0" Click="ReadCustomerBtn_Click">
+                        Read Customer
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Delete Customer By Id:
+                    </TextBlock>
+
+                    <TextBox Name="DeleteIdBox">
+
+                    </TextBox>
+
+                    <Button Margin="0, 10, 0, 0" Click="DeleteCustomerBtn_Click">
+                        Delete Customer
+                    </Button>
+
+
+                    <TextBlock Margin="0, 10, 0, 10" TextWrapping="Wrap" Name="OutputRegister">
+
+                    </TextBlock>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Name By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateNameIdBox">
+
+                    </TextBox>
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Name:
+                    </TextBlock>
+                    <TextBox Name="UpdateNameBox">
+
+                    </TextBox>
+                    <Button Click="UpdateCustomerNameBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Name
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update User Name By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateUserNameIdBox">
+
+                    </TextBox>
+                    
+                    <TextBlock Margin="0, 10, 0, 0">
+                     New User Name:
+                    </TextBlock>
+                    
+                    <TextBox Name="UpdateUserNameBox">
+
+                    </TextBox>
+                    
+                    <Button Click="UpdateCustomerUserNameBtn_Click" Margin="0, 10, 0, 0">
+                        Modify User Name
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Email By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateEmailIdBox">
+
+                    </TextBox>
+                    
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Email:
+                    </TextBlock>
+                    
+                    <TextBox Name="UpdateEmailBox">
+
+                    </TextBox>
+                    
+                    <Button Click="UpdateCustomerEmailBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Email
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Password By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdatePasswordIdBox">
+
+                    </TextBox>
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Password:
+                    </TextBlock>
+                    <TextBox Name="UpdatePasswordBox">
+
+                    </TextBox>
+                    <Button Click="UpdateCustomerPasswordBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Password
+                    </Button>
+
+                    <TextBlock TextWrapping="Wrap" Name="UpdateCustomerOutput">
+                        
+                    </TextBlock>
+
+                    <TextBlock Margin="0, 10, 0, 0" FontWeight="Bold" FontSize="20">
+                        Orders Data
+                    </TextBlock>
+                    
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Orders Customer Id
+                    </TextBlock>
+
+                    <TextBox Name="CustomerIdBox">
+
+                    </TextBox>
+
+                    <TextBlock>
+                    Product:
+                    </TextBlock>
+                    
+                    <TextBox Name="ProductBox">
+
+                    </TextBox>
+                    
+                    <TextBlock>
+                    Quantity:
+                    </TextBlock>
+                    
+                    <TextBox Name="QuantityBox">
+
+                    </TextBox>
+                    
+                    <TextBlock>
+                    Size:
+                    </TextBlock>
+                    
+                    <TextBox Name="SizeBox">
+
+                    </TextBox>
+                    
+                    <TextBlock>
+                    Price:
+                    </TextBlock>
+                    
+                    <TextBox Name="PriceBox">
+
+                    </TextBox>
+                    
+                    <Button Margin="0, 10, 0, 0" Click="OrderBtn_Click">
+                        Order
+                    </Button>
+
+                    <TextBlock>
+                        Read Order By Id:
+                    </TextBlock>
+                    
+                    <TextBox Name="ReadOrderID">
+
+                    </TextBox>
+
+                    <Button Margin="0, 10, 0, 0"  Click="ReadOrderBtn_Click">
+                       Read Order
+                    </Button>
+
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Dete Order By Id:
+                    </TextBlock>
+
+                    
+                    
+                    <TextBox Name="DeleteOrderIdBox">
+
+                    </TextBox>
+                    
+
+                    <Button Click="DeleteOrderBtn_Click" Margin="0, 10, 0, 0">
+                        Delete Order
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0" TextWrapping="Wrap" Name="OutputOrders">
+
+                    </TextBlock>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Customer Id By Order Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateCustomerOrderIdBox">
+
+                    </TextBox>
+                    
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Customer Id:
+                    </TextBlock>
+                    
+                    <TextBox Name="UpdateCustomerIdBox">
+
+                    </TextBox>
+                    
+                    <Button Click="UpdateOrderCustomerIdBtn_Click"  Margin="0, 10, 0, 0">
+                        Modify Customer Id
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Product By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateProductIdBox">
+
+                    </TextBox>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                     New Product:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateProductBox">
+
+                    </TextBox>
+
+                    <Button Click="UpdateOrderProductBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Product
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Quantity By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateQuantityIdBox">
+
+                    </TextBox>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Quantity:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateQuantityBox">
+
+                    </TextBox>
+
+                    <Button Click="UpdateOrderQuantityBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Quantity
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Size By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdateSizeIdBox">
+
+                    </TextBox>
+                    
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Size:
+                    </TextBlock>
+                    
+                    <TextBox Name="UpdateSizeBox">
+
+                    </TextBox>
+                    
+                    <Button Click="UpdateOrderSizeBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Size
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    Update Price By Id:
+                    </TextBlock>
+
+                    <TextBox Name="UpdatePriceIdBox">
+
+                    </TextBox>
+
+                    <TextBlock Margin="0, 10, 0, 0">
+                    New Price:
+                    </TextBlock>
+
+                    <TextBox Name="UpdatePriceBox">
+
+                    </TextBox>
+
+                    <Button Click="UpdateOrderPriceBtn_Click" Margin="0, 10, 0, 0">
+                        Modify Price
+                    </Button>
+
+                    <TextBlock Margin="0, 10, 0, 100" TextWrapping="Wrap" Name="UpdateOrderOutput">
+
+                    </TextBlock>
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </Grid>
+
+    </ScrollViewer>
+        
+</Window>
